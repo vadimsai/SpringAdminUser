@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.google.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="../static/css/css2.css"  rel="stylesheet" /><!--th:href="@{/css/css2.css}"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>ADMIN PAGE</title>
+</head>
+<body>
+
+<section class="zada">
+
+    <div class="refl">
+      <h1> <a href="/"  >Главная</a> </h1>
+    </div>
+
+    <div class="reflog" >
+        <form action="/logout" method="POST">
+            <button type="submit">выход</button>
+        </form>
+    </div>
+    <h4>ADMIN PAGE</h4>
+</section>
+
+<h4 class="j">Spring Security- Spring JPA-Spring Boot</h4>
+
+<div class="contentj">
+
+    <form class="persist" action="#" th:action="@{/admin/save}" method="POST">
+        <div class="button">
+            <button class="btn" type="submit">INSERT</button>
+        </div>
+
+        <div class="form-group">
+            <input
+                    class="input"
+                    type="text"
+                    name="name"
+                    placeholder="Введите имя пользователя"
+                    required
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="surname"
+                    placeholder="Введите фамилию пользователя"
+                    required
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="email"
+                    placeholder="Введите email"
+                    required
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="address"
+                    placeholder="Введите адресс"
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="password"
+                    placeholder="Введите пароль"
+                    required
+            />
+            <select name="role" type="text">
+                <option
+                        th:each="rol : ${T(com.example.demo.model.Role).values()}"
+                        th:value="${rol}"
+                        th:text="${rol}"
+                ></option>
+            </select>
+            <select name="status" type="text">
+                <option
+                        th:each="stat : ${T(com.example.demo.model.Status).values()}"
+                        th:value="${stat}"
+                        th:text="${stat}"
+                ></option>
+            </select>
+        </div>
+        <p th:text="${messages}"></p>
+    </form>
+
+    <form class="merge" action="#" th:action="@{/admin/update}" method="POST">
+        <div class="button">
+            <button class="btn" type="submit">Update</button>
+        </div>
+
+        <div class="form-group">
+            <input
+                    class="inputM"
+                    type="number"
+                    name="id"
+                    placeholder="Введите id"
+                    required
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="name"
+                    placeholder="Введите имя пользователя"
+                    required
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="surname"
+                    placeholder="Введите фамилию пользователя"
+                    required
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="email"
+                    placeholder="Введите email"
+                    required
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="address"
+                    placeholder="Введите адресс"
+            />
+            <input
+                    class="input"
+                    type="text"
+                    name="password"
+                    placeholder="Введите пароль"
+                    required
+            />
+            <select name="role" type="text">
+                <option
+                        th:each="rol : ${T(com.example.demo.model.Role).values()}"
+                        th:value="${rol}"
+                        th:text="${rol}"
+                ></option>
+            </select>
+            <select name="status" type="text">
+                <option
+                        th:each="stat : ${T(com.example.demo.model.Status).values()}"
+                        th:value="${stat}"
+                        th:text="${stat}"
+                ></option>
+            </select>
+        </div>
+        <p th:text="${messageu}"></p>
+    </form>
+
+    <form
+            class="remove"
+            action="#"
+            th:action="@{/admin/delete}"
+            method="POST"
+    >
+        <div class="button">
+            <button class="btn" type="submit">REMOVE</button>
+        </div>
+
+        <div class="formR">
+            <input
+                    class="inputR"
+                    type="number"
+                    name="id"
+                    placeholder="id"
+                    required
+            />
+        </div>
+        <p th:text="${messaged}"></p>
+    </form>
+</div>
+
+
+
+<div class="contentt">
+    <form class="all" action="#" th:action="@{/admin/findById}" method="POST">
+        <div class="button">
+            <button class="btn" type="submit">GetById</button>
+        </div>
+
+        <div class="formR">
+            <input
+                    class="inputM"
+                    type="number"
+                    name="id"
+                    placeholder="Введите id"
+                    required
+            />
+        </div>
+
+        <table class="t">
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>email</th>
+                <th>Address</th>
+                <th>Password</th>
+                <th>Role</th>
+                <th>Status</th>
+            </tr>
+
+            <tr th:each="usersi : ${usersid}">
+                <td th:text="${usersi.id}"></td>
+                <td th:text="${usersi.name}"></td>
+                <td th:text="${usersi.surname}"></td>
+                <td th:text="${usersi.email}"></td>
+                <td th:text="${usersi.address}"></td>
+                <td th:text="${usersi.password}"></td>
+                <td th:text="${usersi.role}"></td>
+                <td th:text="${usersi.status}"></td>
+            </tr>
+        </table>
+        <p th:text="${messagef}"></p>
+    </form>
+</div>
+
+
+<div class="contentt">
+    <form class="all" action="#" th:action="@{/admin/findBysur}" method="POST">
+        <div class="button">
+            <button class="btn" type="submit">GetBySur</button>
+        </div>
+
+        <div class="formR">
+            <input
+                    class="inputM"
+                    type="text"
+                    name="surname"
+                    placeholder="Введите Surname"
+                    required
+            />
+        </div>
+
+        <table class="t">
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>email</th>
+                <th>Address</th>
+                <th>Password</th>
+                <th>Role</th>
+                <th>Status</th>
+            </tr>
+
+            <tr th:each="use : ${userssur}">
+                <td th:text="${use.id}"></td>
+                <td th:text="${use.name}"></td>
+                <td th:text="${use.surname}"></td>
+                <td th:text="${use.email}"></td>
+                <td th:text="${use.address}"></td>
+                <td th:text="${use.password}"></td>
+                <td th:text="${use.role}"></td>
+                <td th:text="${use.status}"></td>
+            </tr>
+        </table>
+        <p th:text="${messagefs}"></p>
+    </form>
+</div>
+
+<div class="contentt">
+    <form class="all" action="#" th:action="@{/admin/getAll}" method="POST">
+        <div class="button">
+            <button class="btn" type="submit">GetALL</button>
+        </div>
+
+        <table class="t">
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>email</th>
+                <th>Address</th>
+                <th>Password</th>
+                <th>Role</th>
+                <th>Status</th>
+            </tr>
+
+            <tr th:each="userja : ${users}">
+                <td th:text="${userja.id}"></td>
+                <td th:text="${userja.name}"></td>
+                <td th:text="${userja.surname}"></td>
+                <td th:text="${userja.email}"></td>
+                <td th:text="${userja.address}"></td>
+                <td th:text="${userja.password}"></td>
+                <td th:text="${userja.role}"></td>
+                <td th:text="${userja.status}"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+</body>
+</html>

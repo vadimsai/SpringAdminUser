@@ -1,0 +1,499 @@
+html{
+    font-size: 15px;
+}
+
+body{
+    
+    margin: 0 auto;
+    font-family: 'Cormorant', serif;
+    font-size: 1rem;
+    /*line-height: 1,6;*/
+     background-color: teal;
+}
+
+*,
+*::before,
+*::after{ box-sizing: border-box;}
+
+
+h1,h2,h3,h4,h5{margin: 0 ;}
+
+.intro{
+    max-height: 100vh;
+    overflow: hidden;
+   position: relative;
+}
+
+.refa{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    text-align: left;
+}
+.refr{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+.refl{
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+
+.refg{
+    position: absolute;
+    top: 330px;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.reflog{
+    position: absolute;
+    right: -20px;
+    top: 35px;
+    width: 16%;
+    margin: 0;
+    z-index: 2;
+    text-align: right;
+    opacity: .4;
+}
+
+
+.h1_video{
+   
+    text-align: center;
+}
+
+
+.button_poz{
+
+    max-width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 3;
+    top:70px ;
+    left: 80%;
+}
+
+.b_t{
+    color: black;
+    width: 40%;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 30%;
+    font-size: 1.2vw;
+    opacity: .6;
+    cursor: pointer;
+  
+}
+p{
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.button{
+    opacity: .4;
+    background-color: #1c87c9;
+    width: 12vw; 
+    height: 12vw;
+    border-radius: 50%;
+    border: none;
+    color: #eeeeee;
+    cursor: pointer;
+    display:inline-block ;
+    font-size: 1.5em 1vh 1rem; 
+    font-weight: normal;
+    padding: 0 0;
+    
+
+    }
+    @keyframes glowing {
+        0% { background-color: #0590a8; box-shadow: 0 0 3px #2ba805; }
+        50% { background-color: #1984e8; box-shadow: 0 0 10px #49e819; }
+        100% { background-color:teal ; box-shadow: 0 0 3px #2ba805; }
+        }
+        .button {
+            animation: glowing 1300ms infinite;
+            } 
+
+
+.video{
+    position: relative;
+    z-index: 1;
+     padding-bottom: 56.25%;
+    height: 70vh;
+}
+
+.video:hover{
+    transition: .3s background-image linear;
+}
+
+
+
+
+
+
+.composit{
+    
+    height: 1300px;
+    
+    margin:  0 auto;
+    position: relative;
+    
+    
+}
+
+small{
+    display: none;
+}
+
+.blavatckay{
+  
+
+    display: flex;
+    justify-content: center; 
+    align-items:center;    
+    flex-direction: column;
+
+    max-width: 39.9%;
+    height: 500px;
+    padding: 40px;
+
+    position: relative;
+    bottom: 5.2%;
+    left: 1.3%;
+
+    border-bottom: solid;
+    border-color: brown;
+    border-width: 1px;
+
+    font-size: 1.2vw;
+    
+    flex-wrap: wrap;
+}
+
+.vid_blav{
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+
+    flex-wrap: wrap;
+}
+
+.t_bl{
+    
+    width: 40%;
+    text-align: left;
+    position: absolute;
+    top: 40%;
+    left: 0.5%;
+
+    flex-wrap: wrap;
+}
+
+.vidb{
+    
+    object-fit: cover;
+    max-width: 13vw;
+    height: 13vw;
+    border-radius: 100% 100% 100% 100%;
+    box-shadow: 0px 1px 5px 17px #06358b; 
+    padding-bottom: 0vw;
+    padding-top: 0vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    margin-right: 5vw;
+
+    flex-wrap: wrap;
+}
+
+
+
+.sai_baba{
+    
+    max-width: 50%;
+    height: 530px;
+    padding: 40px;
+
+    position: relative;
+    bottom: 41%;
+    left: 50%;
+    font-size: 1.2vw;
+}
+
+
+.vid_sai{
+    width: 100%;
+    max-width: 30%;
+    position: absolute;
+    top: 55%;
+    left: 7%;
+
+}
+
+.t_s{
+    
+    width: 40%;
+    text-align: left;
+    position: absolute;
+    top: 60%;
+    right: 20%;
+}
+
+.vids{
+    
+    object-fit: cover;
+    max-width: 13vw;
+    height: 13vw;
+    border-radius: 100% 100% 100% 100%;
+    box-shadow: 0px 1px 5px 17px #d33c0e;  
+    padding-bottom: 0vw;
+    padding-top: 0vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    margin-right: 5vw;
+}
+
+
+.babadgi{
+  
+    max-width: 50%; 
+    height: 400px;
+    padding: 40px;
+
+    position: relative;
+    bottom: 43%;
+    right: 0% ;
+
+   
+    border-color: brown;
+    border-width: 1px;
+    font-size: 1.2vw;
+}
+
+.vid_babadgi{
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+
+}
+
+.t_ba{
+    
+    width: 50%;
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
+
+.vidbab{
+    
+    object-fit: cover;
+    max-width: 13vw;
+    height: 13vw;
+    border-radius: 100% 100% 100% 100%;
+    box-shadow: 0px 1px 5px 17px #a1e6e2; 
+    padding-bottom: 0vw;
+    padding-top: 0vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    margin-right: 5vw;
+}
+
+
+.imram{
+
+    max-width: 50%;
+    height: 500px;
+    padding: 40px;
+ 
+    position: relative;
+    bottom: 72%;
+    left: 50%;
+
+    border-top: solid;
+    border-bottom: solid ;
+    border-color: brown;
+    border-width: 1px;
+    font-size: 1.2vw;
+}
+
+
+.vid_imram{
+    width: 100%;
+    max-width: 30%;
+    padding-bottom: 56.25%;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+
+}
+
+.t_i{
+    
+    width: 30%;
+    text-align: right;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+}
+
+.vidi{
+    
+    object-fit: cover;
+    max-width: 13vw;
+    height: 13vw;
+    border-radius: 100% 100% 100% 100%;
+    box-shadow: 0px 1px 5px 17px #4cdbee;  
+    padding-bottom: 0vw;
+    padding-top: 0vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    margin-right: 5vw;
+}
+
+.dgobs{
+  
+    max-width: 39.9%;
+    height: 420px;
+    padding: 40px;
+
+    position: relative;
+    bottom: 83.8%;
+    left: 10.15%;
+
+    border-top: solid;
+    border-bottom: solid ;
+    border-color: brown;
+    border-width: 1px;
+    font-size: 1.2vw;
+
+}
+
+.vid_dgobs{
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: absolute;
+    top: 5%;
+    left: 60%;
+
+}
+
+.t_d{
+    
+    width: 50%;
+    text-align: left;
+    position: absolute;
+    top: 30%;
+    right: 40%;
+}
+
+.vidd{
+    
+    object-fit: cover;
+    max-width: 13vw;
+    height: 13vw;
+    border-radius: 100% 100% 100% 100%;
+    box-shadow: 0px 1px 5px 17px #eb1515;  
+    padding-bottom: 0vw;
+    padding-top: 0vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    margin-right: 5vw;
+}
+
+
+   
+@media(max-width:650px)
+{
+    .intro{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+
+    .composit{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+
+    .t_bl{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        width: 200%; 
+        height: 100%;
+        font-size: 15px;
+        top: 65%;
+    }
+
+    .t_s{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        width: 100%; 
+        height: 100%;
+        font-size: 15px;
+        top: 30%;
+    }
+
+    .t_ba{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        width: 150%; 
+        height: 100%;
+        font-size: 15px;
+        top: 20%;
+    }
+
+    .t_i{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        width: 150%; 
+        height: 100%;
+        font-size: 15px;
+        top: 50%;
+    }
+
+    
+    .t_d{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        width: 150%; 
+        height: 75%;
+        font-size: 15px;
+        top: 30%;
+        right: -70%;
+    }
+}

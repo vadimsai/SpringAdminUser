@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.google.com/"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="../static/css/site.css"  rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>VadSAI</title>
+</head>
+<body>
+
+
+<div class="intro">
+    <div class="video">
+
+      <video src="/static/css/vid/Flaming Katy - 38126.mp4" width="100%" height="auto" loop muted autoplay>
+          <source src="/static/css/vid/Flaming Katy - 38126.mp4" type="video/mp4">
+
+             <p>Ваш браузер не поддерживает HTML5 video</p>
+      </video>
+
+    </div>
+
+
+    <div class="button_poz">
+       <div class="t_p">
+          <a href="/admin"  class="button" target="_blank" ></a>
+       </div>
+       <div class="b_t">
+           <p>ADMIN PAGE</p>
+       </div>
+    </div>
+
+    <div class="refa">
+       <p>По умолчанию, при регистрации вы получите роль USER</p>
+       <p>Для входa, как ADMIN введите</p>
+       <h4>email: admin</h4>
+       <h4>password: 1</h4>
+    </div>
+
+
+    <div class="refr">
+       <h1> <a href="/registration"  target="_blank" >РЕГИСТРАЦИЯ</a> </h1>
+    </div>
+
+    <div class="refl">
+        <h1> <a href="/auth/login"  target="_blank" >ВХОД</a> </h1>
+    </div>
+
+
+   <div class="reflog" >
+    <form action="/logout" method="POST">
+        <button class="b_t" type="submit">ВЫХОД</button>
+    </form>
+  </div>
+
+    <div class="refg">
+        <h1>Репозиторий проекта</h1>
+       <h1> <a href="https://github.com/vadimsai/HR-master.git/" target="_blank" >https://github.com/vadimsai/HR-master.git</a> </h1>
+    </div>
+
+    <div class="text">
+        <h1 class="h1_video"> THIS IS MY WEB PAGE </h1>
+        <h1 class="h1_video"> WELCOME </h1>
+        <h1 th:text="${users}"></h1>
+    </div>
+
+    <small hidden>
+        ॐ भूर्भुवः स्वः
+        तत् सवितुर्वरेण्यं
+        भर्गो देवस्य धीमहि
+        धियो यो नः प्रचोदयात्</small>
+
+</div>
+
+
+<div class="composit">
+    <div class="blavatckay">
+        <div class="vid_blav">
+             <video src="/static/css/vid/Motion%20-%2018273.mp4" width="100%" height="auto" class="vidb" autoplay muted loop></video>
+        </div>
+        <div class="t_bl">
+            <h4>Блаватская Е.П.</h4>
+          <p>
+            Для чувств и понимания конечных существ «ТО» есть небытие в том смысле,
+             что оно является ЕДИНЫМ БЫТИЕМ.
+            Истина известна только немногим; остальные, не желая снять завесу со
+             своих собственных сердец, воображают, что она ослепляет глаза соседа.
+          </p>
+        </div>
+    </div>
+
+    <div class="sai_baba">
+       <div class="vid_sai">
+           <video src="/static/css/vid/Abstract%20-%2054074.mp4" width="100%" height="auto" class="vids" autoplay muted loop></video>
+       </div>
+
+       <div class="t_s">
+        <h4>Саи Баба</h4>
+           <p>
+            Ты в свете. Свет — в тебе. Ты — свет.
+            Если вы научитесь любить, то вам не нужно будет учиться чему-нибудь ещё.
+          </p>
+       </div>
+    </div>
+
+    <div class="babadgi">
+        <div class="vid_babadgi">
+            <video src="/static/css/vid/Waterfall%20-%2024517.mp4" width="100%" height="auto" class="vidbab" autoplay muted loop></video>
+        </div>
+
+           <div class="t_ba">
+            <h4>Бабаджи</h4>
+              <p>Я выше концентрации, медитации, йоги и любых практик.
+                Моя природа — самосветящееся сознание. 
+                Я — океан экстаза, постоянно посылающий волны своего света в мир, тонущий в хаосе разрушительных мыслей и тревог.
+                Я — то, что бьется в каждой груди, видит в каждом оке, пульсирует в каждом нерве. Я улыбка каждого цветка, сверкание молнии и грохот грома. Я трепет листьев, шепот ветра и волнение моря. 
+                Я мудрость мудрого, сила сильного, героизм героя. Я один во всем и все в одном. Я безличная личность этой вселенной. 
+                Что может испугать меня?</p> 
+           </div>
+    </div>
+
+
+    <div class="imram">
+        <div class="vid_imram">
+            <video src="/static/css/vid/Motion%20-%2018275.mp4" width="100%" height="auto" class="vidi" autoplay muted loop></video>
+        </div>
+
+        <div class="t_i">
+            <h4>Имрам</h4>
+              <p>
+                Вы есть воплощение Любви!
+                Помните, что вы бесконечная сила и воплощение Высшей Любви.
+                Прямо из первоисточника - каждый из нас.
+                Осознание истины есть путь в Вечности за гранью времени...
+             </p>
+        </div>
+    </div>
+
+    <div class="dgobs">
+        <div class="vid_dgobs">
+            <video src="/static/css/vid/Flowers%20-%203760.mp4" width="100%" height="auto" class="vidd" autoplay muted loop></video>
+        </div>
+
+        <div class="t_d">
+            <h4>Джобс</h4>
+              <p>
+                Все, что я унесу с собой, — это лишь воспоминания, связанные с любовью.
+                 Вот настоящее богатство, которое должно следовать за вами,
+                  сопровождать вас, давать вам силы идти дальше.
+                   Любовь способна преодолеть огромные расстояния. У жизни нет пределов.
+                    Достигайте высот, которые вы хотите достичь.
+                     Идите туда, куда зовет вас сердце.
+             </p>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+</body>
